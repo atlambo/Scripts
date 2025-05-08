@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektowanie stron internetowych</title>\
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        h2 {
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Wideo</h3>
+    <video controls width="1080" height="680">
+        <source src="wideo.mp4" type="video/mp4">
+        Twoja przeglądarka nie obsługuje elementu wideo.
+    </video>
+
+    <h3>Audio</h3>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Twoja przeglądarka nie obsługuje elementu audio.
+    </audio>
+    <h3>Canvas</h3>
+    <canvas id="myCanvas" width="200" height="200" style="border:1px solid white;"></canvas>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        // 1
+        ctx.fillStyle = 'red';
+        ctx.fillRect(25, 25, 50, 50);
+        // 2
+        ctx.fillStyle = 'green';
+        ctx.fillRect(75, 25, 50, 50);
+        // 3
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(25, 75, 50, 50);
+        // 4
+        ctx.fillStyle = 'yellow';
+        ctx.fillRect(75, 75, 50, 50);
+    </script>
+    <script>
+        const canvas2 = document.createElement('canvas');
+        canvas2.id = 'lineCanvas';
+        canvas2.width = 200;
+        canvas2.height = 200;
+        canvas2.style.border = '1px solid white';
+        document.body.appendChild(canvas2);
+        const ctx2 = canvas2.getContext('2d');
+        ctx2.fillStyle = 'white';
+        ctx2.fillRect(25, 25, 150, 150);
+        ctx2.strokeStyle = 'blue';
+        ctx2.lineWidth = 2;
+        ctx2.beginPath();
+        ctx2.moveTo(25, 25);
+        ctx2.lineTo(175, 175);
+        ctx2.stroke();
+    </script>
+    <footer>
+    <h4>    by atlambo</h4>
+    </footer>
+
+</body>
+</html>
+</script>
